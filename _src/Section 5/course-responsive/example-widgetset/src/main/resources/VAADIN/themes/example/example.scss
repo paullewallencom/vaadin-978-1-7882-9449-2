@@ -1,0 +1,33 @@
+@import "../valo/valo.scss";
+@import "variables.scss";
+
+@mixin example {
+  @include valo;
+
+
+  .v-ui {
+    @include width-range(0px, 800px) {
+      .valo-menu-logo {
+        display: none;
+      }
+    }
+
+    @include width-range(0px, 800px) {
+      .sign-out-title {
+        display: inline-block;
+      }
+      .sign-out-header {
+        display: none;
+      }
+    }
+
+    @include width-range(801px) {
+      .sign-out-title {
+        display: none;
+      }
+      .sign-out-header {
+        display: inline-block;
+      }
+    }
+  }
+}
